@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --pink: #ffb3c6;
+  --blue: #a8d8ea;
+  --cream: #fff5e4;
+  --dark-pink: #e07a9a;
+  --soft-purple: #d4a5c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #6a1e32, #597b96, #de70f4);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  font-family: 'Nunito', sans-serif;
+  color: var(--dark-pink);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientMove {
+
+0%{ 
+   
+   background-position: 0% 50%;}
+    
+50%{
+      background-position: 100% 50%;}
+
+100%{
+      background-position: 0% 50%;}
+
+
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 8px 30px rgba(255, 179, 198, 0.3);
+  width: 380px;
+}
+
+
+h1 {
+  font-size: 40px;
+  color: var(--dark-pink);
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--soft-purple);
+  margin-bottom: 25px;
+}
+
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.mode-btn {
+  background: var(--cream);
+  border: 2px solid var(--pink);
+  color: var(--dark-pink);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+  background: var(--pink);
+  color: white;
+}
+
+.mode-btn.active {
+  background: var(--pink);
+  color: white;
+}
+
+
+.timer-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 6px 20px rgba(168, 216, 234, 0.5);
+}
+
+#timer {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.control-btn {
+  background: var(--pink);
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: var(--dark-pink);
+  transform: scale(1.05);
+}
+
+#pause {
+  background: var(--blue);
+}
+
+#pause:hover {
+  background: #7bbdd4;
+}
+
+#reset {
+  background: var(--soft-purple);
+}
+
+#reset:hover {
+  background: #b988ae;
+}
+
+
+.quote {
+  font-size: 14px;
+  color: var(--soft-purple);
+  font-style: italic;
+}
