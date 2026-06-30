@@ -38,5 +38,22 @@
 
         </div>
 
+<script>
+  const quotes = [
+    "Small progress is still progress.",
+    "Focus on one thing at a time.",
+    "Consistency beats motivation.",
+    "Build it, then improve it."
+  ];
+
+  function changeQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").textContent = quotes[randomIndex];
+  }
+
+  changeQuote();
+  setInterval(changeQuote, 5000);
+</script>
+        
     </body>
 </html>
